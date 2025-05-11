@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <img src="assets/images/Student-Council.png" alt="Student-Council" class="logo" />
+    <h1>Wits FEBE Students' Council</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="bursaries.html">Bursaries</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Contact Us</h2>
+      <p>If you have any questions, suggestions, or would like to get involved, please reach out to us:</p>
+
+      <div class="contact-info">
+        <p><strong>Email:</strong> <a href="mailto:ebe.facultycouncil@gmail.com">ebe.facultycouncil@gmail.com</a></p>
+        <p><strong>Office Location:</strong> Wits ARM Building, Lower Ground Floor, FEBESC Office, Wits University</p>
+        <p><strong>Office Hours:</strong> Monday – Friday, 08:00 – 16:00</p>
+      </div>
+
+      <h3>Send us a message</h3>
+      <form
+  action="https://formspree.io/f/xbloalbv"
+  method="POST"
+  class="contact-form"
+    onsubmit="alert('Thank you for your message! We will get back to you soon.');"
+    <label for="name">Your Name</label>
+    <input type="text" id="name" name="name" required />
+
+    <label for="email">Your Email</label>
+    <input type="email" id="email" name="email" required />
+
+    <label for="message">Message</label>
+    <textarea id="message" name="message" rows="5" required></textarea>
+
+    <button type="submit">Send</button>
+</form>
+
+      <h3>Follow Us on Social Media</h3>
+      <p>Stay updated with our latest news and events:</p>
+      <ul class="social-media">
+        <li><a href="https://www.instagram.com/ebe_facultycouncil/" target="_blank">Instagram</a></li>
+        <li><a href="https://www.linkedin.com/in/ebe-faculty-council/" target="_blank">linkedIn</a></li>
+    </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 FEBE Students' Council. All rights reserved.</p>
+  </footer>
+</body>
+</html>
