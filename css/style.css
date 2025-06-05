@@ -169,6 +169,11 @@ body {
     padding: 1rem;
     background-color: #f9f9f9;
   }
+
+  /* Make the first council member full width */
+  .council-member:first-child {
+  flex: 1 1 100%;
+  }
   
   .council-member img {
     width: 150px;
