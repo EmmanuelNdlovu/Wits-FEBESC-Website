@@ -327,3 +327,33 @@ nav ul li {
   color: #003366;
   margin: 0;
 }
+
+.our-schools {
+  padding: 2rem 1rem;
+  background-color: #f4f7fa;
+  text-align: center;
+}
+
+.our-schools h2 {
+  color: #003366;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+}
+
+.school-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.school-logos img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.school-logos img:hover {
+  transform: scale(1.1);
+}
