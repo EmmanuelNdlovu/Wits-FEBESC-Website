@@ -328,32 +328,91 @@ nav ul li {
   margin: 0;
 }
 
-.our-schools {
-  padding: 2rem 1rem;
-  background-color: #f4f7fa;
+.our-events {
+  padding: 2rem;
   text-align: center;
+  width: 100%;
+  overflow-x: auto;
 }
 
-.our-schools h2 {
-  color: #003366;
-  margin-bottom: 1.5rem;
-  font-size: 1.8rem;
+.event-row {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 1rem;
+}
+
+.event-card {
+  flex: 0 0 auto;
+  width: 300px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  scroll-snap-align: start;
+  transition: transform 0.3s;
+}
+
+.event-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.event-card h3 {
+  margin: 1rem;
+  font-size: 1.2rem;
+}
+
+.event-card:hover {
+  transform: scale(1.03);
+}
+
+/* Optional: Remove scrollbar on WebKit browsers */
+.event-row::-webkit-scrollbar {
+  display: none;
+}
+
+
+.our-schools {
+  padding: 2rem;
+  text-align: center;
 }
 
 .school-logos {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 
-.school-logos img {
-  width: 100px;
-  height: 100px;
-  object-fit: contain;
+.school-logos a img {
+  height: 60px; /* Adjust as needed */
+  width: auto;
+  max-width: 100%;
   transition: transform 0.3s ease;
 }
 
-.school-logos img:hover {
-  transform: scale(1.1);
+.school-logos a img:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .school-logos {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .school-logos a {
+    flex: 1 1 40%; /* 2 per row on tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .school-logos a {
+    flex: 1 1 100%; /* Stack vertically on small phones */
+  }
 }
