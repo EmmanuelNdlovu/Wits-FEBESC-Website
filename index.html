@@ -54,35 +54,105 @@
     </section>
 
     <section class="events-section">
-      <video class="event-video" muted loop autoplay playsinline>
-
+    
   <h2>Faculty Events</h2>
   <div class="events-grid">
-    <a href="events/orientation.html" class="event-card">
-      <img src="assets/images/events/Bootcamp.jpg" alt="Industry Readiness Event">
+    <a class="event-card" onclick="openVideo('assets/images/events/BootcampVid.mp4')">
+      <div class="poster-container">
+        <img src="assets/images/events/Bootcamp.jpg" 
+        alt="EBE Council Leadership Training Bootcamp 2025">
+        
+        <video class="event-video" muted loop autoplay playsinline>
+          <source src="assets/images/events/BootcampVid.mp4" type="video/mp4">
+        </video>
+      </div>
       <h3>EBE Council Leadership Training Bootcamp 2025</h3>
     </a>
 
-    <a href="events/sports-day.html" class="event-card">
-      <img src="assets/images/events/EBESportsDay.jpg" alt="EBE Sports Festival">
+    <a class="event-card" onclick="openVideo('assets/images/events/EBESportsDayVid.mp4')">
+      <div class="poster-container">
+        <img src="assets/images/events/EBESportsDay.jpg"
+        alt="EBE Sports Festival">
+
+        <video class="event-video" muted loop autoplay playsinline>
+          <source src="assets/images/events/EBESportsDayVid.mp4" type="video/mp4">
+        </video>
+      </div>
       <h3>EBE Sports Festival</h3>
     </a>
 
-    <a href="events/womens-day.html" class="event-card">
-      <img src="assets/images/events/EBEWomenDay.jpg" alt="EBE Women's Day Celebration">
+    <a class="event-card" onclick="openVideo('assets/images/events/EBEWomenDayVid.mp4')">
+      <div class="poster-container">
+        <img src="assets/images/events/EBEWomenDay.jpg" 
+        alt="EBE Women's Day Celebration">
+
+        <video class="event-video" muted loop autoplay playsinline>
+          <source src="assets/images/events/EBEWomenDayVid.mp4" type="video/mp4">
+        </video>
+      </div>
       <h3>EBE Women's Day Celebration</h3>
     </a>
 
-    <a href="events/Energy-Indaba.html" class="event-card">
-      <img src="assets/images/events/EBESCENERGYIND.jpg" alt="EBESC Presents Wits Energy Indaba">
-      <h3> EBESC Presents Wits Energy Indaba </h3>
-      <video class="event-video" muted loop autoplay playsinline>
-        <source src="assets/videos/EBESCENERGYIND.mp4" type="video/mp4">
-      </video>
-    </a>
+    <a class="event-card" onclick="openVideo('assets/images/events/EnergyIndVid.mp4')">
+  <div class="poster-container">
+    
+    <img src="assets/images/events/EBESCENERGYIND.jpg"
+         alt="EBESC Presents Wits Energy Indaba">
+
+    <video class="event-video" muted loop autoplay playsinline>
+      <source src="assets/images/events/EnergyIndVid.mp4" type="video/mp4">
+    </video>
+
+  </div>
+
+  <h3>EBESC Presents Wits Energy Indaba</h3>
+</a>
+
   </div>
 </section>
   </main>
+
+  <div id="videoModal" class="video-modal">
+  <span class="close-btn" onclick="closeVideo()">×</span>
+  <video id="modalVideo" controls></video>
+</div>
+
+  <script>
+  // Hover preview play/pause
+  document.querySelectorAll(".poster-container").forEach(container => {
+    const video = container.querySelector(".preview-video");
+
+    container.addEventListener("mouseenter", () => {
+      video.play();
+    });
+
+    container.addEventListener("mouseleave", () => {
+      video.pause();
+      video.currentTime = 0;
+    });
+  });
+
+  // Modal open
+  function openVideo(videoSrc) {
+    const modal = document.getElementById("videoModal");
+    const video = document.getElementById("modalVideo");
+
+    video.src = videoSrc;
+    modal.style.display = "flex";
+    video.play();
+  }
+
+  // Modal close
+  function closeVideo() {
+    const modal = document.getElementById("videoModal");
+    const video = document.getElementById("modalVideo");
+
+    video.pause();
+    video.src = "";
+    modal.style.display = "none";
+  }
+</script>
+
 
   <footer>
     <p>&copy; 2025 FEBE Students' Council. All rights reserved.</p>
