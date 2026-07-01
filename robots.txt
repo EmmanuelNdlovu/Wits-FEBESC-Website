@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: 
 
-Sitemap: https://www.witsfebesc.me/sitemap.xml
+Sitemap: https://www.witsfebesc.co.za/sitemap.xml
