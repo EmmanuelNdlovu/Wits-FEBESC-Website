@@ -27,8 +27,12 @@
   <meta property="og:type" content="website" />
 
   <!-- Styles -->
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  
+      <link rel="stylesheet" href="css/style.css" />
 </head>
+
 <body>
   <header>
     <img src="assets/images/Student-Council.png" alt="Student-Council" style="height: 80px; width: 200px;" />
@@ -44,20 +48,217 @@
     </nav>
   </header>
 
-  <main>
-    <section>
-      <h2>Welcome to the Bursary Hub</h2>
-      <p>
-        This website is maintained by the Wits Faculty of Engineering and the Built Environment Students' Council. It provides up-to-date bursary opportunities, news, and information relevant to engineering and the built environment students.
-      </p>
-      <img src="assets/images/Council-pic26.jpg" alt="Council-pic" class="council-image" />
-    </section>
+<!-- Announcement Bar -->
+<section class="announcement-bar">
 
-    <section class="events-section">
+    <i class="fas fa-bullhorn"></i>
+
+    <span>
+        Applications for the Hatch Bursary Programme 2026 are now open!
+        Deadline: 30 September 2025
+    </span>
+
+    <a href="bursaries.html">
+        Learn More →
+    </a>
+
+</section>
+
+<!-- Hero -->
+<section class="hero">
+
+    <div class="hero-slide active"
+        style="background-image:url('assets/images/hero/hero1.jpeg');">
+    </div>
+
+    <div class="hero-slide"
+        style="background-image:url('assets/images/hero/hero2.jpg');">
+    </div>
+
+    <div class="hero-slide"
+        style="background-image:url('assets/images/hero/hero3.jpg');">
+    </div>
+
+    <div class="hero-slide"
+        style="background-image:url('assets/images/hero/hero4.jpg');">
+    </div>
+
+        <div class="hero-slide"
+        style="background-image:url('assets/images/hero/hero5.jpg');">
+    </div>
+
+        <div class="hero-slide"
+        style="background-image:url('assets/images/hero/hero6.jpg');">
+    </div>
+
+        <div class="hero-slide"
+        style="background-image:url('assets/images/hero/hero7.jpg');">
+    </div>
+
+        <div class="hero-slide"
+        style="background-image:url('assets/images/hero/hero8.jpg');">
+    </div>
+
+    <div class="hero-overlay">
+
+        <h1>
+            Wits Faculty of Engineering<br>
+            & the Built Environment<br>
+            Students' Council
+        </h1>
+
+        <p>
+            Empowering students through leadership,
+            development, collaboration and academic excellence.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="bursaries.html" class="btn-primary">
+                Explore Opportunities
+            </a>
+
+            <a href="#events" class="btn-secondary">
+                Upcoming Events
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="quick-access  fade-in">
+
+    <div class="quick-access-container">
+
+        <h2>Quick Access</h2>
+
+        <div class="quick-grid">
+
+            <a href="bursaries.html" class="quick-card">
+
+                <div class="quick-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+
+                <h3>Bursaries</h3>
+
+                <p>
+                    Discover bursary opportunities available to
+                    Engineering and Built Environment students.
+                </p>
+
+            </a>
+
+            <a href="graduate_programmes.html" class="quick-card">
+
+                <div class="quick-icon">
+                    <i class="fas fa-briefcase"></i>
+                </div>
+
+                <h3>Graduate Programmes</h3>
+
+                <p>
+                    Explore internships, graduate programmes
+                    and vacation work opportunities.
+                </p>
+
+            </a>
+
+            <a href="#events" class="quick-card">
+
+                <div class="quick-icon">
+                    <i class="fas fa-calendar-alt"></i>
+                </div>
+
+                <h3>Events</h3>
+
+                <p>
+                    Stay informed about leadership,
+                    networking and faculty events.
+                </p>
+
+            </a>
+
+            <a href="about.html" class="quick-card">
+
+                <div class="quick-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+
+                <h3>About Us</h3>
+
+                <p>
+                    Meet your Faculty Students' Council
+                    and learn about our mission.
+                </p>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="stats-section  fade-in">
+
+    <div class="stats-container">
+
+        <h2>FEBE at a Glance</h2>
+
+        <p class="stats-subtitle">
+            Supporting engineering and built environment students through
+            leadership, opportunities and student development.
+        </p>
+
+        <div class="stats-grid">
+
+            <div class="stat-card">
+    <div class="stat-number" data-target="7">0</div>
+    <div class="stat-label">Schools</div>
+</div>
+
+<div class="stat-card">
+    <div class="stat-number" data-target="8000">0</div>
+    <div class="stat-label">Students</div>
+</div>
+
+<div class="stat-card">
+    <div class="stat-number" data-target="100">0</div>
+    <div class="stat-label">Bursaries & Graduate Opportunities</div>
+</div>
+
+<div class="stat-card">
+    <div class="stat-number" data-target="20">0</div>
+    <div class="stat-label">Leadership & Faculty Events</div>
+</div>
+        </div>
+
+    </div>
+
+</section>
+
+  <main class="home-main">
+    <section class="intro">
+
+    <h2>Who We Are</h2>
+
+    <p>
+The Wits Faculty of Engineering and the Built Environment Students' Council (FEBESC)
+is the official student representative body serving all seven schools within the Faculty.
+Our mission is to foster student development, advocate for student interests, strengthen
+industry engagement, and create opportunities that empower every engineering and built
+environment student to thrive academically, professionally, and socially.
+    </p>
+</section>
+
+    <section id="events" class="events-section fade-in">
     
   <h2>Faculty Events</h2>
   <div class="events-grid">
-    <a class="event-card" onclick="openVideo('assets/images/events/BootcampVid2.mp4')">
+    <a href="events/bootcamp.html" class="event-card">
       <div class="poster-container">
         <img src="assets/images/events/Bootcamp.jpg" 
         alt="EBE Council Leadership Training Bootcamp 2025">
@@ -69,7 +270,7 @@
       <h3>EBE Council Leadership Training Bootcamp 2025</h3>
     </a>
 
-    <a class="event-card" onclick="openVideo('assets/images/events/EBESportsDayVid.mp4')">
+    <a href="events/sports-festival.html" class="event-card">
       <div class="poster-container">
         <img src="assets/images/events/EBESportsDay.jpg"
         alt="EBE Sports Festival">
@@ -81,7 +282,7 @@
       <h3>EBE Sports Festival</h3>
     </a>
 
-    <a class="event-card" onclick="openVideo('assets/images/events/EBEWomenDayVid.mp4')">
+    <a href="events/womens-day.html" class="event-card">
       <div class="poster-container">
         <img src="assets/images/events/EBEWOMENDAY.jpg" 
         alt="EBE Women's Day Celebration">
@@ -93,7 +294,7 @@
       <h3>EBE Women's Day Celebration</h3>
     </a>
 
-    <a class="event-card" onclick="openVideo('assets/images/events/EnergyIndVid.mp4')">
+    <a href="events/energy-indaba.html" class="event-card">
   <div class="poster-container">
     
     <img src="assets/images/events/EBESCENERGYIND.jpg"
@@ -117,6 +318,7 @@
   <video id="modalVideo" controls></video>
 </div>
 
+<!--
   <script>
   // Hover preview play/pause
   document.querySelectorAll(".poster-container").forEach(container => {
@@ -152,10 +354,12 @@
     modal.style.display = "none";
   }
 </script>
-
+--->
 
   <footer>
     <p>&copy; 2025 FEBE Students' Council. All rights reserved.</p>
   </footer>
+
+  <script src="assets/js/script.js"></script>
 </body>
 </html>
