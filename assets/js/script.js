@@ -258,3 +258,21 @@ if(searchInput){
     });
 
 }
+
+// ===============================
+// MOBILE MENU
+// ===============================
+
+const menuButton = document.querySelector(".menu-toggle");
+
+const navigation = document.querySelector("nav");
+
+if(menuButton){
+
+    menuButton.addEventListener("click",()=>{
+
+        navigation.classList.toggle("active");
+
+    });
+
+}

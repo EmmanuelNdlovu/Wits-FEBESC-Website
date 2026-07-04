@@ -1,568 +1,395 @@
-/* Base Styles */
-html {
-    scroll-behavior: smooth;
+/* ==========================================================
+   1. RESET & GLOBAL STYLES
+========================================================== */
+
+html{
+    scroll-behavior:smooth;
 }
 
-*{
-    box-sizing: border-box;
+*,
+*::before,
+*::after{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f5f5f5;
-    color: #333;
-  }
-  
-/* ===========================================
-   HEADER
-=========================================== */
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f5f5f5;
+    color:#333;
+    line-height:1.6;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+a{
+    text-decoration:none;
+    transition:.3s ease;
+}
+
+ul{
+    list-style:none;
+}
+
+h1,h2,h3,h4{
+    font-weight:700;
+}
+
+h2{
+    color:#003366;
+}
+
+
+/* ==========================================================
+   2. MAIN LAYOUT
+========================================================== */
+
+main{
+
+    max-width:900px;
+
+    margin:0 auto;
+
+    padding:140px 1rem 2rem;
+
+}
+
+.home-main{
+
+    padding-top:0;
+
+}
+
+
+/* ==========================================================
+   3. HEADER
+========================================================== */
 
 header{
-    position: fixed;
+
+    position:fixed;
+
     top:0;
+
     left:0;
+
     width:100%;
-    padding:18px 50px;
+
     display:flex;
+
     justify-content:space-between;
+
     align-items:center;
-    background:transparent;
-    color:white;
-    transition:0.4s ease;
+
+    padding:18px 50px;
+
     z-index:1000;
+
+    background:transparent;
+
+    transition:.35s ease;
+
 }
 
 header.scrolled{
+
     background:#003366;
-    box-shadow:0 4px 15px rgba(0,0,0,.25);
+
+    box-shadow:0 5px 20px rgba(0,0,0,.18);
+
 }
-  
-  header img {
-    height: 60px;
-    margin-right: 1rem;
-  }
-    header h1 {
-        font-size: 2.5rem;
-        margin: 0;
-        flex-grow: 1;
-    }  
-  
-  /* header h1 {
-    margin: 0;
-    font-size: 2rem;
-  }
-   */
-  /* Navigation */
-nav ul{
-    display:flex;
-    align-items:center;
-    gap:2rem;
-    list-style:none;
-    margin:0;
-    padding:0;
+
+header img{
+
+    height:60px;
+
+    width:auto;
+
 }
-  
-nav a{
+
+header h1{
+
+    flex:1;
+
+    margin-left:20px;
+
     color:white;
-    text-decoration:none;
+
+    font-size:2.4rem;
+
+}
+
+
+/* ==========================================================
+   4. NAVIGATION
+========================================================== */
+
+nav ul{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:2rem;
+
+}
+
+nav a{
+
+    color:white;
+
     font-weight:bold;
+
+    position:relative;
+
+}
+
+nav a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-5px;
+
+    width:0;
+
+    height:2px;
+
+    background:#A28C74;
+
     transition:.3s;
+
 }
 
 nav a:hover{
+
     color:#A28C74;
-}
-  
-  /* Main content */
-main {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 140px 1rem 2rem;
+
 }
 
-.home-main {
-    padding-top: 0;
-}
-  
-  h2 {
-    color: #003366;
-  }
-  
-  /* Footer */
-  footer {
-    background-color: #003366;
-    color: white;
-    text-align: center;
-    padding: 1rem;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-  }
-  
-  .council-image {
-    width: 100%;
-    max-width: 1000px;
-    height: auto;
-    display: block;
-    margin: 2rem auto 0 auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  }
-  
-  .bursary-list {
-    list-style: none;
-    padding-left: 0;
-    margin-top: 2rem;
-  }
-  
-  .bursary-list li {
-    background: #fff;
-    margin-bottom: 1.5rem;
-    padding: 1.5rem;
-    border-left: 5px solid #003366;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  }
-  
-  .bursary-list h3 {
-    margin-top: 0;
-    color: #003366;
-  }
-  
-  .bursary-list a {
-    color: #0066cc;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  .bursary-list a:hover {
-    text-decoration: underline;
-  }
+nav a:hover::after{
 
-  .graduates-programmes {
-    margin-top: 2rem;
-    padding: 1rem;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  }
-  .graduates-programmes h3 {
-    margin-top: 0;
-    color: #003366;
-  }
-  .graduates-programmes ul {
-    list-style-type: none;
-    padding-left: 0;
-  }
+    width:100%;
 
-  .graduates-programmes li {
-    background: #f9f9f9;
-    margin-bottom: 1rem;
-    padding: 1rem;
-    border-left: 5px solid #003366;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  }
-
-  .graduates-programmes a {
-    color: #0066cc;
-    text-decoration: none;
-    font-weight: bold;
-  }
-
-  .graduates-programmes a:hover {
-    text-decoration: underline;
-  }
-  
-  main ul {
-    padding-left: 1.5rem;
-    list-style-type: disc;
-  }
-  
-  .council-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    margin-top: 1rem;
-  }
-  
-  .council-member {
-    flex: 1 1 250px;
-    text-align: center;
-    border: 1px solid #ccc;
-    border-radius: 12px;
-    padding: 1rem;
-    background-color: #f9f9f9;
-  }
-
-  /* Make the first council member full width */
-  .council-member:first-child {
-  flex: 1 1 100%;
-  }
-  
-  .council-member img {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 50%;
-    margin-bottom: 0.5rem;
-  }
-
-  .contact-info p {
-    margin-bottom: 0.5rem;
-  }
-  
-  .contact-form {
-    margin-top: 1rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-    max-width: 500px;
-  }
-  
-  .contact-form input,
-  .contact-form textarea {
-    padding: 0.5rem;
-    font-size: 1rem;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-  }
-  
-  .contact-form button {
-    width: fit-content;
-    padding: 0.5rem 1rem;
-    background-color: #0057b7;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-  }
-  
-  .contact-form button:hover {
-    background-color: #00449e;
-  }
-  
-  @media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  header h1 {
-    font-size: 1.8rem;
-    text-align: left;
-    width: 100%;
-  }
-
-  nav ul {
-  align-items: flex-start;
-  padding-left: 1.5rem; /* Adds spacing from the left edge */
-}
-
-nav ul li {
-  text-align: left;
-  width: 100%;
 }
 
 
-  main {
-    padding: 1rem;
-  }
+/* ==========================================================
+   5. BUTTONS
+========================================================== */
 
-  /* Mobile page spacing */
-main{
-    padding-top: 9rem;
+.btn-primary{
+
+    display:inline-block;
+
+    background:#A28C74;
+
+    color:#003366;
+
+    padding:16px 35px;
+
+    border-radius:50px;
+
+    font-weight:bold;
+
 }
 
-  .council-grid {
-    flex-direction: column;
-    gap: 1rem;
-  }
+.btn-primary:hover{
 
-  .council-member {
-    flex: 1 1 100%;
-  }
+    transform:translateY(-3px);
 
-  .graduates-programmes li,
-  .bursary-list li {
-    padding: 1rem;
-    font-size: 0.95rem;
-  }
-
-  .contact-form {
-    width: 100%;
-    padding: 0 1rem;
-  }
-
-  .council-image {
-    width: 100%;
-    margin: 1rem auto;
-  }
-
-  h2, h3 {
-    font-size: 1.2rem;
-    text-align: center;
-  }
 }
 
-.events-section {
-  margin-top: 4rem;
-  padding: 2rem 1rem;
-  background-color: #fff;
-  text-align: center;
+.btn-secondary{
+
+    display:inline-block;
+
+    border:2px solid white;
+
+    color:white;
+
+    padding:16px 35px;
+
+    border-radius:50px;
+
+    font-weight:bold;
+
 }
 
-.events-section h2 {
-  color: #003366;
-  font-size: 2rem;
-  margin-bottom: 2rem;
-}
+.btn-secondary:hover{
 
-.events-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
-}
+    transform:translateY(-3px);
 
-.event-card {
-  width: 250px;
-  background-color: #f5f5f5;
-  border-radius: 10px;
-  overflow: hidden;
-  text-align: center;
-  text-decoration: none;
-  color: #333;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  display: flex;
-  flex-direction: column;
-}
-
-.event-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
-.event-card img {
-  width: 100%;
-  height: 280px;
-  object-fit: cover;
-  display: block;
-  border-bottom: 1px solid #ddd;
-}
-
-.event-card h3 {
-  padding: 1rem;
-  font-size: 1.1rem;
-  color: #003366;
-  margin: 0;
-}
-
-.our-events {
-  padding: 2rem;
-  text-align: center;
-  width: 100%;
-  overflow-x: auto;
-}
-
-.event-row {
-  display: flex;
-  gap: 1.5rem;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  padding-bottom: 1rem;
-}
-
-.event-card {
-  flex: 0 0 auto;
-  width: 300px;
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 12px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  scroll-snap-align: start;
-  transition: transform 0.3s;
-}
-
-.event-card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-top-left-radius: 12px;
-  border-top-right-radius: 12px;
-}
-
-.event-card h3 {
-  margin: 1rem;
-  font-size: 1.2rem;
-}
-
-.event-card:hover {
-  transform: scale(1.03);
-}
-
-/* Optional: Remove scrollbar on WebKit browsers */
-.event-row::-webkit-scrollbar {
-  display: none;
 }
 
 
-.our-schools {
-  padding: 2rem;
-  text-align: center;
+/* ==========================================================
+   6. FOOTER
+========================================================== */
+
+footer{
+
+    background:#003366;
+
+    color:white;
+
+    text-align:center;
+
+    padding:1rem;
+
+    margin: 0;
+
 }
 
-.school-logos {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
+
+/* ==========================================================
+   7. COMMON COMPONENTS
+========================================================== */
+
+.council-image{
+
+    width:100%;
+
+    border-radius:12px;
+
+    margin:2rem auto;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.15);
+
 }
 
-.school-logos a img {
-  height: 60px; /* Adjust as needed */
-  width: auto;
-  max-width: 100%;
-  transition: transform 0.3s ease;
+.contact-info p{
+
+    margin-bottom:.6rem;
+
 }
 
-.school-logos a img:hover {
-  transform: scale(1.05);
+.contact-form{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:1rem;
+
+    max-width:500px;
+
+    margin-top:1.5rem;
+
 }
 
-@media (max-width: 768px) {
-  .school-logos {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
+.contact-form input,
+.contact-form textarea{
 
-  .school-logos a {
-    flex: 1 1 40%; /* 2 per row on tablets */
-  }
+    padding:.75rem;
+
+    border:1px solid #ccc;
+
+    border-radius:8px;
+
+    font-size:1rem;
+
 }
 
-@media (max-width: 480px) {
-  .school-logos a {
-    flex: 1 1 100%; /* Stack vertically on small phones */
-  }
+.contact-form button{
+
+    width:fit-content;
+
+    padding:.8rem 1.5rem;
+
+    border:none;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    background:#003366;
+
+    color:white;
+
+    transition:.3s;
+
 }
 
-.poster-container {
-  position: relative;
-  width: 300px;
-  height: 400px;
-  overflow: hidden;
-  border-radius: 12px;
+.contact-form button:hover{
+
+    background:#A28C74;
+
+    color:#003366;
+
 }
 
-.poster-container img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.event-video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0;
-  transition: opacity 0.4s ease;
-  pointer-events: none;
-}
-
-.poster-container:hover .event-video {
-  opacity: 1;
-}
-
-.poster-container:hover img {
-  opacity: 0;
-}
-
-.video-modal {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.9);
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
-
-.video-modal video {
-  max-width: 90%;
-  max-height: 90%;
-  border-radius: 12px;
-}
-
-.close-btn {
-  position: absolute;
-  top: 20px;
-  right: 40px;
-  font-size: 40px;
-  color: white;
-  cursor: pointer;
-}
-
-/* ==========================================
-   ANNOUNCEMENT BAR
-========================================== */
+/* ==========================================================
+   8. ANNOUNCEMENT BAR
+========================================================== */
 
 .announcement-bar{
+
     background:#A28C74;
+
     color:#003366;
 
     display:flex;
+
     justify-content:center;
+
     align-items:center;
+
     gap:1rem;
 
-    padding:0.8rem 1rem;
+    padding:.8rem 1rem;
+
+    text-align:center;
 
     font-weight:600;
-    text-align:center;
+
     flex-wrap:wrap;
+
+    margin:0;
+
 }
 
 .announcement-bar i{
-    font-size:1.2rem;
+
     color:#003366;
+
+    font-size:1.2rem;
+
     flex-shrink:0;
+
 }
 
 .announcement-bar span{
+
     line-height:1.5;
+
 }
 
 .announcement-bar a{
+
     color:#003366;
+
     font-weight:bold;
-    text-decoration:none;
+
 }
 
 .announcement-bar a:hover{
+
     text-decoration:underline;
-}
-
-@media (max-width:768px){
-
-    .announcement-bar{
-        flex-direction:column;
-        gap:0.5rem;
-        padding:1rem;
-    }
 
 }
 
-/* ===========================================
-   HERO
-=========================================== */
+
+/* ==========================================================
+   9. HOME HERO
+========================================================== */
 
 .hero{
 
@@ -574,27 +401,36 @@ main{
 
     overflow:hidden;
 
+    margin:0;
+
 }
 
 .hero-slide{
-    position: absolute;
-    inset: 0;
 
-    background-size: cover;
-    background-position: center;
+    position:absolute;
 
-    opacity: 0;
+    inset:0;
 
-    transform: scale(1);
+    background-size:cover;
+
+    background-position:center;
+
+    opacity:0;
+
+    transform:scale(1);
 
     transition:
-        opacity 1.5s ease-in-out,
+        opacity 1.2s ease,
         transform 8s linear;
+
 }
 
 .hero-slide.active{
-    opacity: 1;
-    transform: scale(1.08);
+
+    opacity:1;
+
+    transform:scale(1.08);
+
 }
 
 .hero::before{
@@ -606,7 +442,7 @@ main{
     inset:0;
 
     background:linear-gradient(
-        rgba(0,35,90,.65),
+        rgba(0,35,90,.68),
         rgba(0,35,90,.45)
     );
 
@@ -634,7 +470,7 @@ main{
 
     color:white;
 
-    padding:20px;
+    padding:2rem;
 
 }
 
@@ -644,17 +480,17 @@ main{
 
     line-height:1.1;
 
-    margin-bottom:20px;
+    margin-bottom:1.5rem;
 
 }
 
 .hero-overlay p{
 
-    font-size:1.4rem;
+    max-width:850px;
 
-    max-width:800px;
+    font-size:1.35rem;
 
-    margin-bottom:40px;
+    margin-bottom:2.5rem;
 
 }
 
@@ -662,56 +498,24 @@ main{
 
     display:flex;
 
-    gap:20px;
+    gap:1.5rem;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
 
 }
 
-.btn-primary{
 
-    background:#A28C74;
-
-    color:#003366;
-
-    padding:16px 35px;
-
-    border-radius:50px;
-
-    text-decoration:none;
-
-    font-weight:bold;
-
-    transition:.3s;
-
-}
-
-.btn-secondary{
-
-    border:2px solid white;
-
-    color:white;
-
-    padding:16px 35px;
-
-    border-radius:50px;
-
-    text-decoration:none;
-
-    transition:.3s;
-
-}
-
-.btn-primary:hover,
-.btn-secondary:hover{
-
-    transform:translateY(-3px);
-
-}
+/* ==========================================================
+   10. SCROLL INDICATOR
+========================================================== */
 
 .scroll-indicator{
 
     position:absolute;
 
-    bottom:35px;
+    bottom:30px;
 
     left:50%;
 
@@ -729,11 +533,16 @@ main{
 
 .scroll-indicator span{
 
-    font-size:2rem;
-
     display:block;
 
+    font-size:2rem;
+
 }
+
+
+/* ==========================================================
+   11. HERO ANIMATIONS
+========================================================== */
 
 @keyframes bounce{
 
@@ -757,383 +566,58 @@ main{
 
 }
 
-@media(max-width:768px){
+.fade-in{
 
-.hero{
+    opacity:0;
 
-    height:70vh;
-    min-height:500px;
+    transform:translateY(40px);
 
-}
-
-.hero-overlay h1{
-
-    font-size:2.5rem;
+    transition:
+        opacity .8s ease,
+        transform .8s ease;
 
 }
 
-.hero-overlay p{
+.fade-in.show{
 
-    font-size:1rem;
+    opacity:1;
 
-}
-
-.hero-buttons{
-
-    flex-direction:column;
-
-    width:100%;
+    transform:translateY(0);
 
 }
 
-.btn-primary,
-.btn-secondary{
+/* ==========================================================
+   12. HOMEPAGE SECTIONS
+========================================================== */
 
-    width:100%;
+section{
+
+    margin:5rem 0;
+
+}
+
+section h2{
 
     text-align:center;
 
-}
+    margin-bottom:2.5rem;
+
+    font-size:2.2rem;
 
 }
 
-/* =====================================================
-   EVENT PAGE
-===================================================== */
 
-/* ---------- Hero ---------- */
-
-.event-hero{
-    position: relative;
-    width: 100%;
-    height: 80vh;
-    overflow: hidden;
-}
-
-.event-hero video{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-}
-
-.event-hero::after{
-    content:"";
-    position:absolute;
-    inset:0;
-    background:rgba(0,0,0,0.45);
-}
-
-.event-overlay{
-    position:absolute;
-    top:50%;
-    left:50%;
-    transform:translate(-50%,-50%);
-    text-align:center;
-    color:white;
-    z-index:2;
-    width:90%;
-}
-
-.event-overlay h1{
-    font-size:3rem;
-    margin-bottom:1rem;
-}
-
-.event-overlay p{
-    font-size:1.3rem;
-}
-
-/* ---------- Sections ---------- */
-
-.event-section{
-    max-width:1000px;
-    margin:4rem auto;
-    padding:0 1rem;
-}
-
-.event-section h2{
-    margin-bottom:1.5rem;
-    color:#003366;
-    border-left:6px solid #003366;
-    padding-left:15px;
-}
-
-/* ---------- Event Image ---------- */
-
-.event-image{
-    width:100%;
-    border-radius:12px;
-    margin-bottom:2rem;
-    box-shadow:0 5px 15px rgba(0,0,0,.15);
-}
-
-/* ---------- Event Details ---------- */
-
-.event-details{
-    width:100%;
-    border-collapse:collapse;
-}
-
-.event-details td{
-    padding:1rem;
-    border-bottom:1px solid #ddd;
-}
-
-.event-details tr:nth-child(even){
-    background:#f7f7f7;
-}
-
-/* ---------- Gallery ---------- */
-
-.gallery-grid{
-
-    display:grid;
-
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-
-    gap:1.5rem;
-
-}
-
-.gallery-grid img{
-
-    width:100%;
-
-    border-radius:12px;
-
-    cursor:pointer;
-
-    transition:.3s;
-
-}
-
-.gallery-grid img:hover{
-
-    transform:scale(1.03);
-
-}
-
-/* ---------- Resources ---------- */
-
-.resources-list{
-
-    list-style:none;
-
-    padding:0;
-
-}
-
-.resources-list li{
-
-    background:white;
-
-    margin-bottom:1rem;
-
-    padding:1rem;
-
-    border-left:5px solid #003366;
-
-    box-shadow:0 2px 5px rgba(0,0,0,.1);
-
-}
-
-.resources-list a{
-
-    text-decoration:none;
-
-    color:#003366;
-
-    font-weight:bold;
-
-}
-
-/* ---------- Back Button ---------- */
-
-.back-home{
-
-    text-align:center;
-
-    margin:4rem 0;
-
-}
-
-.back-home a{
-
-    display:inline-block;
-
-    background:#003366;
-
-    color:white;
-
-    padding:14px 30px;
-
-    border-radius:8px;
-
-    text-decoration:none;
-
-    transition:.3s;
-
-}
-
-.back-home a:hover{
-
-    background:#0055aa;
-
-}
-
-/* ---------- Mobile ---------- */
-
-@media(max-width:768px){
-
-.event-hero{
-
-    height:55vh;
-
-}
-
-.event-overlay h1{
-
-    font-size:2rem;
-
-}
-
-.event-overlay p{
-
-    font-size:1rem;
-
-}
-
-.event-section{
-
-    margin:2rem auto;
-
-}
-
-}
-
-/* ---------- Event Meta ---------- */
-
-.event-meta{
-
-    margin-top:2rem;
-
-    display:flex;
-
-    justify-content:center;
-
-    gap:2rem;
-
-    flex-wrap:wrap;
-
-}
-
-.meta-item{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:.6rem;
-
-    background:rgba(255,255,255,.15);
-
-    backdrop-filter:blur(8px);
-
-    padding:.8rem 1.4rem;
-
-    border-radius:10px;
-
-    font-size:1rem;
-
-    color:white;
-
-    border:1px solid rgba(255,255,255,.25);
-
-}
-
-.meta-item i{
-
-    color:#A28C74;
-
-    font-size:1.1rem;
-
-}
-
-/* =====================================================
-   GALLERY LIGHTBOX
-===================================================== */
-
-.gallery-modal{
-
-    display:none;
-
-    position:fixed;
-
-    inset:0;
-
-    background:rgba(0,0,0,.92);
-
-    z-index:9999;
-
-    justify-content:center;
-
-    align-items:center;
-
-}
-
-.gallery-modal img{
-
-    max-width:90%;
-
-    max-height:90%;
-
-    border-radius:12px;
-
-    box-shadow:0 10px 40px rgba(0,0,0,.4);
-
-}
-
-.gallery-close{
-
-    position:absolute;
-
-    top:25px;
-
-    right:40px;
-
-    color:white;
-
-    font-size:50px;
-
-    cursor:pointer;
-
-    user-select:none;
-
-    transition:.3s;
-
-}
-
-.gallery-close:hover{
-
-    color:#d0d0d0;
-
-}
-
-.gallery-grid img{
-
-    cursor:pointer;
-
-}
-
-/* =====================================================
+/* ==========================================================
    QUICK ACCESS
-===================================================== */
+========================================================== */
 
 .quick-access{
 
     background:#f8f9fb;
 
     padding:5rem 1rem;
+
+    margin: 0;
 
 }
 
@@ -1142,18 +626,6 @@ main{
     max-width:1200px;
 
     margin:auto;
-
-}
-
-.quick-access h2{
-
-    text-align:center;
-
-    margin-bottom:3rem;
-
-    color:#003366;
-
-    font-size:2rem;
 
 }
 
@@ -1175,17 +647,15 @@ main{
 
     border-radius:16px;
 
-    text-decoration:none;
+    text-align:center;
 
     color:#333;
 
-    text-align:center;
-
     box-shadow:0 8px 25px rgba(0,0,0,.08);
 
-    transition:all .3s ease;
-
     border-top:5px solid #003366;
+
+    transition:.3s;
 
 }
 
@@ -1193,31 +663,13 @@ main{
 
     transform:translateY(-8px);
 
-    box-shadow:0 18px 35px rgba(0,0,0,.15);
+    box-shadow:0 15px 35px rgba(0,0,0,.15);
 
 }
 
 .quick-icon{
 
-    font-size:3.2rem;
-
-    color:#003366;
-
-    margin-bottom:1.2rem;
-
-    transition:.3s;
-
-}
-
-.quick-card:hover .quick-icon{
-
-    transform:scale(1.15);
-
-    color:#0056b3;
-
-}
-
-.quick-card h3{
+    font-size:3rem;
 
     color:#003366;
 
@@ -1225,28 +677,35 @@ main{
 
 }
 
-.quick-card p{
+.quick-card:hover .quick-icon{
 
-    line-height:1.6;
+    color:#A28C74;
 
 }
 
-/* =====================================================
+
+/* ==========================================================
    FEBE AT A GLANCE
-===================================================== */
+========================================================== */
 
 .stats-section{
 
     background:#003366;
+
     color:white;
+
     padding:5rem 1rem;
+
+    margin: 0;
 
 }
 
 .stats-container{
 
     max-width:1200px;
+
     margin:auto;
+
     text-align:center;
 
 }
@@ -1254,24 +713,25 @@ main{
 .stats-section h2{
 
     color:white;
-    font-size:2.2rem;
-    margin-bottom:1rem;
 
 }
 
 .stats-subtitle{
 
     max-width:700px;
-    margin:0 auto 3rem;
+
+    margin:1rem auto 3rem;
+
     opacity:.9;
-    line-height:1.6;
 
 }
 
 .stats-grid{
 
     display:grid;
+
     grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
     gap:2rem;
 
 }
@@ -1279,9 +739,13 @@ main{
 .stat-card{
 
     background:rgba(255,255,255,.08);
+
     border:1px solid rgba(255,255,255,.15);
+
     border-radius:15px;
+
     padding:2rem;
+
     transition:.3s;
 
 }
@@ -1289,48 +753,445 @@ main{
 .stat-card:hover{
 
     transform:translateY(-8px);
-    background:rgba(255,255,255,.12);
 
 }
 
 .stat-number{
 
     font-size:3rem;
-    font-weight:bold;
+
     color:#A28C74;
-    margin-bottom:.5rem;
+
+    font-weight:bold;
 
 }
 
 .stat-label{
 
-    font-size:1.1rem;
-    line-height:1.5;
+    margin-top:.5rem;
 
 }
 
-/* =====================================================
-   FADE IN ANIMATION
-===================================================== */
 
-.fade-in{
+/* ==========================================================
+   EVENTS
+========================================================== */
+
+.events-section{
+
+    padding:5rem 1rem;
+
+    background:white;
+
+    text-align:center;
+
+    margin: 0;
+
+}
+
+.events-grid{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:2rem;
+
+}
+
+.event-row{
+
+    display:flex;
+
+    gap:2rem;
+
+    overflow-x:auto;
+
+    scroll-snap-type:x mandatory;
+
+    padding-bottom:1rem;
+
+}
+
+.event-row::-webkit-scrollbar{
+
+    display:none;
+
+}
+
+.event-card{
+
+    flex:0 0 auto;
+
+    width:300px;
+
+    background:white;
+
+    border-radius:14px;
+
+    overflow:hidden;
+
+    color:#333;
+
+    border:1px solid #ddd;
+
+    box-shadow:0 5px 18px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+    scroll-snap-align:start;
+
+}
+
+.event-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 15px 35px rgba(0,0,0,.18);
+
+}
+
+.poster-container{
+
+    position:relative;
+
+    width:100%;
+
+    height:400px;
+
+    overflow:hidden;
+
+}
+
+.poster-container img,
+
+.poster-container video{
+
+    position:absolute;
+
+    inset:0;
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transition:.4s;
+
+}
+
+.event-video{
 
     opacity:0;
-    transform:translateY(40px);
-    transition:opacity .8s ease, transform .8s ease;
+
+    pointer-events:none;
 
 }
 
-.fade-in.show{
+.poster-container:hover .event-video{
 
     opacity:1;
-    transform:translateY(0);
 
 }
 
-/* =====================================
-   BURSARY CARDS
-===================================== */
+.poster-container:hover img{
+
+    opacity:0;
+
+}
+
+.event-card h3{
+
+    margin:1rem;
+
+    color:#003366;
+
+    font-size:1.15rem;
+
+}
+
+
+/* ==========================================================
+   VIDEO MODAL
+========================================================== */
+
+.video-modal{
+
+    display:none;
+
+    position:fixed;
+
+    inset:0;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:rgba(0,0,0,.9);
+
+    z-index:9999;
+
+}
+
+.video-modal video{
+
+    max-width:90%;
+
+    max-height:90%;
+
+    border-radius:12px;
+
+}
+
+.close-btn{
+
+    position:absolute;
+
+    top:20px;
+
+    right:40px;
+
+    font-size:3rem;
+
+    color:white;
+
+    cursor:pointer;
+
+}
+
+
+/* ==========================================================
+   OUR SCHOOLS
+========================================================== */
+
+.our-schools{
+
+    text-align:center;
+
+    padding:4rem 1rem;
+
+    margin: 0;
+
+}
+
+.school-logos{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:2rem;
+
+}
+
+.school-logos img{
+
+    height:65px;
+
+    width:auto;
+
+    transition:.3s;
+
+}
+
+.school-logos img:hover{
+
+    transform:scale(1.08);
+
+}
+
+/* ==========================================================
+   13. SHARED CARD COMPONENTS
+========================================================== */
+
+.card-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+    gap:2rem;
+
+    margin-top:2rem;
+
+}
+
+.info-card{
+
+    background:white;
+
+    border-radius:16px;
+
+    padding:2rem;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+
+    transition:all .3s ease;
+
+}
+
+.info-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 15px 35px rgba(0,0,0,.15);
+
+}
+
+.info-card h3{
+
+    color:#003366;
+
+    margin-bottom:1rem;
+
+}
+
+.info-card p{
+
+    line-height:1.7;
+
+}
+
+.info-card img{
+
+    display:block;
+
+    margin:0 auto 1.5rem;
+
+}
+
+
+/* ==========================================================
+   14. COUNCIL
+========================================================== */
+
+.council-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:2rem;
+
+    margin-top:2rem;
+
+}
+
+.council-member{
+
+    background:white;
+
+    padding:2rem;
+
+    border-radius:18px;
+
+    text-align:center;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+.council-member:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.council-member:first-child{
+
+    grid-column:1/-1;
+
+}
+
+.council-member img{
+
+    width:160px;
+
+    height:160px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    margin:0 auto 1rem;
+
+    border:5px solid #A28C74;
+
+}
+
+.council-member h3{
+
+    color:#003366;
+
+    margin-bottom:.5rem;
+
+}
+
+.council-member p{
+
+    margin-bottom:.4rem;
+
+}
+
+
+/* ==========================================================
+   15. BURSARIES
+========================================================== */
+
+.bursary-search-section{
+
+    margin:2rem 0;
+
+}
+
+.search-box{
+
+    max-width:650px;
+
+    margin:auto;
+
+    display:flex;
+
+    align-items:center;
+
+    background:white;
+
+    padding:1rem 1.5rem;
+
+    border-radius:50px;
+
+    box-shadow:0 6px 20px rgba(0,0,0,.08);
+
+}
+
+.search-box i{
+
+    color:#A28C74;
+
+    margin-right:1rem;
+
+}
+
+.search-box input{
+
+    flex:1;
+
+    border:none;
+
+    outline:none;
+
+    font-size:1rem;
+
+    background:none;
+
+}
 
 .bursary-grid{
 
@@ -1354,7 +1215,7 @@ main{
 
     text-align:center;
 
-    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
 
     transition:.3s;
 
@@ -1368,13 +1229,13 @@ main{
 
 .bursary-logo{
 
-    height:80px;
+    height:85px;
 
     width:auto;
 
-    object-fit:contain;
+    margin:0 auto 1.5rem;
 
-    margin-bottom:1rem;
+    object-fit:contain;
 
 }
 
@@ -1384,7 +1245,7 @@ main{
 
     flex-direction:column;
 
-    gap:.7rem;
+    gap:.8rem;
 
     margin:1.5rem 0;
 
@@ -1412,17 +1273,17 @@ main{
 
     display:inline-block;
 
-    padding:.8rem 1.8rem;
+    margin-top:1rem;
+
+    padding:.9rem 2rem;
 
     background:#003366;
 
     color:white;
 
-    text-decoration:none;
-
     border-radius:8px;
 
-    transition:.3s;
+    font-weight:bold;
 
 }
 
@@ -1430,58 +1291,820 @@ main{
 
     background:#A28C74;
 
-}
-
-/* ==========================================
-   BURSARY SEARCH
-========================================== */
-
-.bursary-search-section{
-
-    margin:2rem 0;
+    color:#003366;
 
 }
 
-.search-box{
 
-    max-width:600px;
+/* ==========================================================
+   16. GRADUATE PROGRAMMES
+========================================================== */
 
-    margin:auto;
+.graduates-programmes{
+
+    margin-top:3rem;
+
+}
+
+.graduate-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+    gap:2rem;
+
+}
+
+.graduate-card{
+
+    background:white;
+
+    border-radius:18px;
+
+    padding:2rem;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+.graduate-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.graduate-card img{
+
+    height:85px;
+
+    margin:0 auto 1.5rem;
+
+    object-fit:contain;
+
+}
+
+.graduate-card h3{
+
+    color:#003366;
+
+    text-align:center;
+
+    margin-bottom:1rem;
+
+}
+
+.graduate-card p{
+
+    line-height:1.7;
+
+}
+
+.graduate-card .apply-btn{
+
+    display:block;
+
+    width:fit-content;
+
+    margin:2rem auto 0;
+
+}
+
+/* ==========================================================
+   17. EVENT PAGES
+========================================================== */
+
+.event-hero{
+
+    position:relative;
+
+    width:100%;
+
+    height:80vh;
+
+    overflow:hidden;
+
+}
+
+.event-hero video{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+.event-hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+        rgba(0,35,90,.65),
+        rgba(0,35,90,.45)
+    );
+
+    z-index:1;
+
+}
+
+.event-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    z-index:2;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    color:white;
+
+    padding:2rem;
+
+}
+
+.event-overlay h1{
+
+    font-size:3rem;
+
+    margin-bottom:1rem;
+
+}
+
+.event-overlay p{
+
+    font-size:1.2rem;
+
+    max-width:800px;
+
+    margin-bottom:2rem;
+
+}
+
+
+/* ==========================================================
+   EVENT META
+========================================================== */
+
+.event-meta{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:1rem;
+
+}
+
+.meta-item{
 
     display:flex;
 
     align-items:center;
 
-    background:white;
+    gap:.6rem;
 
-    border-radius:50px;
+    padding:.9rem 1.4rem;
 
-    padding:0.9rem 1.3rem;
+    background:rgba(255,255,255,.15);
 
-    box-shadow:0 5px 20px rgba(0,0,0,.08);
+    backdrop-filter:blur(10px);
+
+    border:1px solid rgba(255,255,255,.2);
+
+    border-radius:12px;
 
 }
 
-.search-box i{
+.meta-item i{
 
     color:#A28C74;
 
-    font-size:1.1rem;
+}
 
-    margin-right:1rem;
+
+/* ==========================================================
+   EVENT CONTENT
+========================================================== */
+
+.event-section{
+
+    max-width:1100px;
+
+    margin:4rem auto;
+
+    padding:0 1rem;
 
 }
 
-.search-box input{
+.event-section h2{
 
-    flex:1;
+    color:#003366;
 
-    border:none;
+    border-left:5px solid #A28C74;
 
-    outline:none;
+    padding-left:15px;
 
-    font-size:1rem;
+    margin-bottom:2rem;
 
-    background:transparent;
+}
+
+.event-image{
+
+    width:100%;
+
+    border-radius:16px;
+
+    margin-bottom:2rem;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.12);
+
+}
+
+
+/* ==========================================================
+   EVENT DETAILS TABLE
+========================================================== */
+
+.event-details{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    margin-top:2rem;
+
+}
+
+.event-details td{
+
+    padding:1rem;
+
+    border-bottom:1px solid #ddd;
+
+}
+
+.event-details tr:nth-child(even){
+
+    background:#f8f8f8;
+
+}
+
+
+/* ==========================================================
+   EVENT GALLERY
+========================================================== */
+
+.gallery-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+    gap:1.5rem;
+
+}
+
+.gallery-grid img{
+
+    width:100%;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+
+}
+
+.gallery-grid img:hover{
+
+    transform:scale(1.04);
+
+}
+
+
+/* ==========================================================
+   GALLERY LIGHTBOX
+========================================================== */
+
+.gallery-modal{
+
+    display:none;
+
+    position:fixed;
+
+    inset:0;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:rgba(0,0,0,.92);
+
+    z-index:9999;
+
+}
+
+.gallery-modal img{
+
+    max-width:90%;
+
+    max-height:90%;
+
+    border-radius:12px;
+
+}
+
+.gallery-close{
+
+    position:absolute;
+
+    top:25px;
+
+    right:35px;
+
+    font-size:3rem;
+
+    color:white;
+
+    cursor:pointer;
+
+}
+
+
+/* ==========================================================
+   RELATED RESOURCES
+========================================================== */
+
+.resources-list{
+
+    list-style:none;
+
+    display:grid;
+
+    gap:1rem;
+
+}
+
+.resources-list li{
+
+    background:white;
+
+    border-left:5px solid #A28C74;
+
+    border-radius:10px;
+
+    padding:1rem 1.5rem;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+
+}
+
+.resources-list a{
+
+    color:#003366;
+
+    font-weight:bold;
+
+}
+
+.resources-list a:hover{
+
+    color:#A28C74;
+
+}
+
+
+/* ==========================================================
+   BACK BUTTON
+========================================================== */
+
+.back-home{
+
+    text-align:center;
+
+    margin:5rem 0;
+
+}
+
+.back-home a{
+
+    display:inline-block;
+
+    padding:1rem 2rem;
+
+    background:#003366;
+
+    color:white;
+
+    border-radius:10px;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+.back-home a:hover{
+
+    background:#A28C74;
+
+    color:#003366;
+
+}
+
+
+/* ==========================================================
+   CONTACT
+========================================================== */
+
+.contact-info{
+
+    display:grid;
+
+    gap:1rem;
+
+    margin: 0;
+
+}
+
+.contact-info i{
+
+    color:#A28C74;
+
+    margin-right:.5rem;
+
+}
+/* ==========================================================
+   18. RESPONSIVE DESIGN
+========================================================== */
+
+@media (max-width: 768px){
+
+    /* ---------- Header ---------- */
+
+    header{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        padding:1rem;
+
+    }
+
+    header img{
+
+        height:50px;
+
+        margin-bottom:.5rem;
+
+    }
+
+    header h1{
+
+        font-size:1.7rem;
+
+        margin:0 0 1rem 0;
+
+        width:100%;
+
+    }
+
+    nav{
+
+        width:100%;
+
+    }
+
+    nav ul{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:.75rem;
+
+        width:100%;
+
+    }
+
+    nav li{
+
+        width:100%;
+
+    }
+
+    nav a{
+
+        display:block;
+
+        width:100%;
+
+        padding:.4rem 0;
+
+    }
+
+    /* ---------- Main ---------- */
+
+    main{
+
+        padding-top:9rem;
+
+    }
+
+    .home-main{
+
+        padding-top:0;
+
+    }
+
+    /* ---------- Announcement ---------- */
+
+    .announcement-bar{
+
+        flex-direction:column;
+
+        gap:.5rem;
+
+        text-align:center;
+
+        padding:1rem;
+
+    }
+
+    /* ---------- Hero ---------- */
+
+    .hero{
+
+        height:75vh;
+
+        min-height:550px;
+
+    }
+
+    .hero-overlay h1{
+
+        font-size:2.4rem;
+
+    }
+
+    .hero-overlay p{
+
+        font-size:1rem;
+
+    }
+
+    .hero-buttons{
+
+        flex-direction:column;
+
+        width:100%;
+
+        max-width:320px;
+
+    }
+
+    .btn-primary,
+    .btn-secondary{
+
+        width:100%;
+
+        text-align:center;
+
+    }
+
+    /* ---------- Sections ---------- */
+
+    section{
+
+        margin:3rem 0;
+
+    }
+
+    section h2{
+
+        font-size:1.8rem;
+
+    }
+
+    /* ---------- Events ---------- */
+
+    .events-grid{
+
+        flex-direction:column;
+
+        align-items:center;
+
+    }
+
+    .event-card{
+
+        width:100%;
+
+        max-width:340px;
+
+    }
+
+    .poster-container{
+
+        height:320px;
+
+    }
+
+    /* ---------- Quick Access ---------- */
+
+    .quick-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    /* ---------- Statistics ---------- */
+
+    .stats-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    /* ---------- Schools ---------- */
+
+    .school-logos{
+
+        gap:1rem;
+
+    }
+
+    .school-logos img{
+
+        height:50px;
+
+    }
+
+    /* ---------- Council ---------- */
+
+    .council-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .council-member:first-child{
+
+        grid-column:auto;
+
+    }
+
+    /* ---------- Bursaries ---------- */
+
+    .bursary-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .graduate-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .search-box{
+
+        border-radius:15px;
+
+    }
+
+    /* ---------- Event Pages ---------- */
+
+    .event-hero{
+
+        height:60vh;
+
+    }
+
+    .event-overlay h1{
+
+        font-size:2rem;
+
+    }
+
+    .event-overlay p{
+
+        font-size:1rem;
+
+    }
+
+    .event-meta{
+
+        flex-direction:column;
+
+        align-items:center;
+
+    }
+
+    .gallery-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .event-details td{
+
+        display:block;
+
+        width:100%;
+
+    }
+
+    /* ---------- Contact ---------- */
+
+    .contact-form{
+
+        width:100%;
+
+    }
+
+    /* ---------- Modal ---------- */
+
+    .video-modal video,
+    .gallery-modal img{
+
+        max-width:95%;
+
+        max-height:85%;
+
+    }
+
+}
+
+@media (max-width:480px){
+
+    header h1{
+
+        font-size:1.4rem;
+
+    }
+
+    .hero{
+
+        min-height:480px;
+
+    }
+
+    .hero-overlay h1{
+
+        font-size:2rem;
+
+    }
+
+    .hero-overlay p{
+
+        font-size:.95rem;
+
+    }
+
+    .event-overlay h1{
+
+        font-size:1.7rem;
+
+    }
+
+    .meta-item{
+
+        width:100%;
+
+        justify-content:center;
+
+    }
+
+    .btn-primary,
+    .btn-secondary{
+
+        padding:14px 22px;
+
+    }
 
 }
