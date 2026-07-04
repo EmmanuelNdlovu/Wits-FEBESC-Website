@@ -224,3 +224,37 @@ const fadeObserver = new IntersectionObserver((entries)=>{
 },{threshold:0.15});
 
 fadeElements.forEach(el=>fadeObserver.observe(el));
+
+// =========================================
+// BURSARY SEARCH
+// =========================================
+
+const searchInput = document.getElementById("bursarySearch");
+
+if(searchInput){
+
+    searchInput.addEventListener("keyup", function(){
+
+        const value = this.value.toLowerCase();
+
+        const cards = document.querySelectorAll(".bursary-card");
+
+        cards.forEach(card=>{
+
+            const text = card.textContent.toLowerCase();
+
+            if(text.includes(value)){
+
+                card.style.display="block";
+
+            }else{
+
+                card.style.display="none";
+
+            }
+
+        });
+
+    });
+
+}

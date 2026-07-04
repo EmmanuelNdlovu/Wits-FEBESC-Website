@@ -1321,3 +1321,161 @@ nav ul li {
     transform:translateY(0);
 
 }
+
+/* =====================================
+   BURSARY CARDS
+===================================== */
+
+.bursary-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+    gap:2rem;
+
+    margin-top:2rem;
+
+}
+
+.bursary-card{
+
+    background:white;
+
+    border-radius:18px;
+
+    padding:2rem;
+
+    text-align:center;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+.bursary-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.bursary-logo{
+
+    height:80px;
+
+    width:auto;
+
+    object-fit:contain;
+
+    margin-bottom:1rem;
+
+}
+
+.bursary-info{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:.7rem;
+
+    margin:1.5rem 0;
+
+}
+
+.bursary-info span{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:.5rem;
+
+}
+
+.bursary-info i{
+
+    color:#A28C74;
+
+}
+
+.apply-btn{
+
+    display:inline-block;
+
+    padding:.8rem 1.8rem;
+
+    background:#003366;
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:8px;
+
+    transition:.3s;
+
+}
+
+.apply-btn:hover{
+
+    background:#A28C74;
+
+}
+
+/* ==========================================
+   BURSARY SEARCH
+========================================== */
+
+.bursary-search-section{
+
+    margin:2rem 0;
+
+}
+
+.search-box{
+
+    max-width:600px;
+
+    margin:auto;
+
+    display:flex;
+
+    align-items:center;
+
+    background:white;
+
+    border-radius:50px;
+
+    padding:0.9rem 1.3rem;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+
+}
+
+.search-box i{
+
+    color:#A28C74;
+
+    font-size:1.1rem;
+
+    margin-right:1rem;
+
+}
+
+.search-box input{
+
+    flex:1;
+
+    border:none;
+
+    outline:none;
+
+    font-size:1rem;
+
+    background:transparent;
+
+}
