@@ -259,20 +259,48 @@ if(searchInput){
 
 }
 
-// ===============================
+/// ===============================
 // MOBILE MENU
 // ===============================
 
-const menuButton = document.querySelector(".menu-toggle");
+const menuToggle = document.querySelector(".menu-toggle");
+const nav = document.querySelector("nav");
 
-const navigation = document.querySelector("nav");
+if(menuToggle){
 
-if(menuButton){
+    menuToggle.addEventListener("click", ()=>{
 
-    menuButton.addEventListener("click",()=>{
+        nav.classList.toggle("active");
 
-        navigation.classList.toggle("active");
+        const icon = menuToggle.querySelector("i");
+
+        if(nav.classList.contains("active")){
+
+            icon.classList.remove("fa-bars");
+            icon.classList.add("fa-xmark");
+
+        }else{
+
+            icon.classList.remove("fa-xmark");
+            icon.classList.add("fa-bars");
+
+        }
 
     });
 
 }
+
+document.querySelectorAll("nav a").forEach(link=>{
+
+    link.addEventListener("click",()=>{
+
+        nav.classList.remove("active");
+
+        const icon = menuToggle.querySelector("i");
+
+        icon.classList.remove("fa-xmark");
+        icon.classList.add("fa-bars");
+
+    });
+
+});

@@ -36,11 +36,15 @@
   <header>
     <img src="assets/images/Student-Council.png" alt="Student-Council" class="logo" style="height: 80px; width: 200px;" />
     <h1>Wits FEBE Students' Council</h1>
+    <button class="menu-toggle" aria-label="Toggle navigation">
+    <i class="fas fa-bars"></i>
+</button>
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="bursaries.html">Bursaries</a></li>
         <li><a href="graduate_programmes.html">Graduate Programmes</a></li>
+        <li><a href="vacation_work.html">Vacation Work</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
@@ -48,176 +52,641 @@
   </header>
   
   <main>
-    <section>
-      <h2>Current Graduate Programme Opportunities</h2>
-      <p>Below is a list of graduate programmes currently open to Engineering and Built Environment students:</p>
+    <section class="event-section fade-in">
 
-      <ul class="graduates-programmes">
-      <h2>Engineering</h2>
-      <ul>
-        <li>
-          <strong>Sasol Foundation Graduate Internship Programme</strong><br>
-          <em>Preferred Qualifications:</em> BSc/BEng in Civil, Industrial Engineering<br>
-          <em>Closing Date:</em> 10 March 2026<br>
-          <a href="https://jobs.sasol.com/job/Secunda-Sasol-Foundation-Graduate-Internship-Programme-x-22/1367701633/" target="_blank">Apply here</a>
-        </li>
-        <li>
-          <strong>Eskom Engineer-in-Training</strong><br>
-          <em>Preferred Qualifications:</em> BSc/BEng in Electrical Engineering<br>
-          <em>Closing Date:</em> 27 February 2026<br>
-          <a href="https://eskomcareers.ci.hr/applicant/index.php?controller=Listings&method=view&listingid=b12a5578-2d9f-49f5-bbf7-cb26dd1579c7" target="_blank">Apply here</a>
-          <a href="https://eskomcareers.ci.hr/applicant/index.php?controller=Listings&method=view&listingid=997ef4d0-b942-4344-a007-20f7a860c1ff" target="_blank">Apply here</a>
-        </li>
-        <li>
-          <strong>Rand Water Graduate Internship Programme</strong><br>
-          <em>Preferred Qualifications:</em> BSc/BEng in Construction Management Studies (Hons)<br>
-          <em>Closing Date:</em> 09 March 2026<br>
-          <a href="https://randwater.erecruit.co/candidateapp/Jobs/View/RAN260223-2?source=LinkedInLimitedListings" target="_blank">Apply here</a>
-        </li>
-        <li>
-          <strong> P&G Manufacturing Process Engineer</strong><br>
-          <em>Preferred Qualifications:</em> BSc/BEng in Engineering Mechanical, Electrical, Industrial or related fields<br>
-          <em>Closing Date:</em> 30 March 2026<br>
-          <a href="https://www.pgcareers.com/global/en/job/R000134499/Manufacturing-Process-Engineer?source=RS_LINKEDIN" target="_blank">Apply here</a>
-        </li>
-        <li>
-          <strong>Vodacom – Discover Graduate Programme</strong><br>
-          <em>Preferred Qualifications:</em> BSc/BEng in Computer Science, Information Technology, or Electrical Engineering<br>
-          <em>Closing Date:</em> 31 August 2025<br>
-          <a href="https://www.vodacom.com/discover-graduate-programme.php" target="_blank">Apply here</a>
-        </li>
-        <li>
-          <strong>Transnet – Graduate Programme</strong><br>
-          <em>Preferred Qualifications:</em> BSc/BEng in Civil, Mechanical, Electrical, or Industrial Engineering<br>
-          <em>Closing Date:</em> 31 July 2025<br>
-          <em>Note:</em> Applications are yet to open.<br>
-          <a href="https://www.transnet.net/RenderPage.aspx?id=2701803" target="_blank">Apply here</a>
-        </li>
-        <li>
-          <strong>Anglo American – Graduate Programme</strong><br>
-          <em>Preferred Qualifications:</em> BSc/BEng in Mining, Mechanical, Electrical, or Civil Engineering<br>
-          <em>Closing Date:</em> 31 August 2025<br>
-          <em>Note:</em> Applications are yet to open.<br>
-          <a href="https://www.angloamerican.com/careers/graduates" target="_blank">Apply here</a>
-        </li>
-        <li>
-          <strong>Capitec Bank – Graduate Programme</strong><br>
-          <em>Preferred Qualifications:</em> BSc/BEng in Computer Science, Information Technology, or Engineering<br>
-          <em>Closing Date:</em> 31 August 2025<br>
-          <a href="https://careers.capitecbank.co.za/go/Graduate-&-Bursaries/3666001/" target="_blank">Apply here</a>
-        </li>
-        <li>
-          <strong>TotalEnergies – Graduate Programme</strong><br>
-          <em>Preferred Qualifications:</em> BSc/BEng in Engineering or related fields<br>
-          <em>Closing Date:</em> 30 June 2025<br>
-          <a href="https://jobs.totalenergies.com/en_US/careers/JobDetail/Young-Talent-Trainee/53389?src=LinkedIn" target="_blank">Apply here</a>
-        </li>
-        <li>
-          <strong>Nedbank - Young Analyst Programme</strong><br>
-          <em>Preferred Qualifications:</em> BSc/BEng in Engineering, Computer Science, or related fields<br>
-          <em>Closing Date:</em> 30 June 2025<br>
-          <a href="https://cib.nedbank.co.za/culture/young-analyst-programme.html" target="_blank">Apply here</a>
-        </li>
-        <li>
-          <strong>FNB-Engineering & Technology – Graduate Programme</strong><br>
-          <em>Preferred Qualifications:</em> BSc/BEng in Engineering<br>
-          <em>Closing Date:</em> 29 August 2025<br>
-          <a href="https://firstrand.wd3.myworkdayjobs.com/en-US/FRB/job/FNB-Engineering---Technology-Graduate-Programme_R29737?locationCountry=4db3c26940b944919b83612cc1193eed" target="_blank">Apply here</a>
-        </li>
-        <li>
-          <strong>Ford Industrial Engineering – Graduate Programme</strong><br>
-          <em>Preferred Qualifications:</em> BSc/BEng in Industrial Engineering<br>
-          <em>Closing Date:</em> 30 June 2025<br>
-          <a href="https://efds.fa.em5.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/46018?utm_medium=jobboard&utm_source=linkedin" target="_blank">Apply here</a>
-        </li>
-        <li>
-          <strong>BBD – Graduate Programme</strong><br>
-          <em>Preferred Qualifications:</em> BSc/BEng in Computer Science, Information Technology, or Engineering<br>
-          <em>Closing Date:</em> 31 August 2025<br>
-          <a href="https://bbdsoftware.com/jobs/Apply/apply.html?jobId=P4OFK026203F3VBQB798N79QY-220423&langCode=en_GB&_gl=1*e26aa3*_ga*OTUyMjYxNTk1LjE3NDgyMDMyMDc.*_up*MQ.." target="_blank">Apply here</a>
-        </li>
-        <li>
-          <strong>Entelect – Graduate Programme</strong><br>
-          <em>Preferred Qualifications:</em> BSc/BEng in Computer Science, Information Technology, or Engineering<br>
-          <em>Closing Date:</em> 30 November 2025<br>
-          <a href="https://culture.entelect.co.za/the-entelect-graduate-programme/" target="_blank">Apply here</a>
-        </li>
-        <li>
-          <strong>Steinmüller Africa – Engineer-in-Training (EIT) Programme</strong><br>
-          <em>Preferred Qualifications:</em> BEng/BSc in Mechanical, Structural, Civil, or Chemical Engineering<br>
-          <em>Closing Date:</em> 31 August 2025<br>
-          <a href="https://steinmullerafrica.simplify.hr/Vacancy/125168" target="_blank">Apply here</a>
-        </li>
-        <li>
-          <strong>Sibanye Stillwater - Internships</strong><br>
-          <em>Preferred Qualifications:</em> BSc/BEng in Metallurgy or Mechanical Engineering<br>
-          <em>Closing Date:</em> 30 June 2025<br>
-          <a href="https://sbsess.sibanyestillwater.com/Account/recruitment" target="_blank">Apply here</a>
-        </li>
-      </ul>
+    <h2>Graduate Programmes</h2>
 
-      <h2>Built Environment</h2>
-      <ul>
-        <li>
-          <strong>Rand Water Graduate Internship Programme</strong><br>
-          <em>Preferred Qualifications:</em> BSc/BEng in Construction Management Studies (Hons)<br>
-          <em>Closing Date:</em> 09 March 2026<br>
-          <a href="https://randwater.erecruit.co/candidateapp/Jobs/View/RAN260223-7?source=LinkedInLimitedListings" target="_blank">Apply here</a>
-        </li>
-        <li>
-          <strong>Gert Sibande District Municipality: Infrastructure Skills Development Grant (ISDG) Graduates Programme 2025</strong><br>
-          <em>Preferred Qualifications:</em> BSc in Civil Engineering, Urban and Regional Planning, or related fields<br>
-          <em>Closing Date:</em> 20 June 2025<br>
-          <a href="https://lnkd.in/gqPj7vFB" target="_blank">Apply here</a>
-        </li>
-        <li>
-          <strong>Nyeleti Consulting - JNR Structural Draughtsperson</strong><br>
-          <em>Preferred Qualifications:</em> BSc/BEng in Architectural or Structural Engineering<br>
-          <em>Closing Date:</em> 20 June 2025<br>
-          <a href="https://www.linkedin.com/company/nyeleti-consulting-pty-ltd/posts/?feedView=all" target="_blank">Apply here</a>
-        </li>
-        <li>
-          <strong>Makhaotse, Narasimulu and Associates – Graduate Programme</strong><br>
-          <em>Preferred Qualifications:</em> BSc/BEng in Civil Engineering<br>
-          <em>Closing Date:</em> 24 June 2025<br>
-          <a href="https://www.linkedin.com/company/makhaotse-narasimulu-and-associates-pty-ltd/posts/?feedView=all" target="_blank">Apply here</a>
-        </li>
-        <li>
-          <strong>GIBB – Graduate Programme</strong><br>
-          <em>Preferred Qualifications:</em> BSc/BEng in Civil, Structural, or Mechanical Engineering<br>
-          <em>Closing Date:</em> 30 June 2025<br>
-          <a href="https://gibbjobs.mcidirecthire.com/Vacancy" target="_blank">Apply here</a>
-        </li>
-        <li>
-          <strong>SMEC – Graduate Programme</strong><br>
-          <em>Preferred Qualifications:</em> BSc/BEng in Civil, Structural, or Mechanical Engineering<br>
-          <em>Closing Date:</em> 30 June 2025<br>
-          <a href="https://surbanajurong.wd3.myworkdayjobs.com/careersatsmec" target="_blank">Apply here</a>
-        </li>
-        <li>
-          <strong>Gautrain – Graduate Programme</strong><br>
-          <em>Preferred Qualifications:</em> BSc/BEng in Civil, Structural, or Mechanical Engineering<br>
-          <em>Closing Date:</em> 30 June 2025<br>
-          <a href="https://gma.gautrain.co.za/careers/Pages/graduate-programme.html" target="_blank">Apply here</a>
-        </li>
-        <li>
-          <strong>Gauteng Department of Human Settlements – Graduate Programme</strong><br>
-          <em>Preferred Qualifications:</em> BSc in Town and Regional Planning<br>
-          <em>Closing Date:</em> 30 June 2025<br>
-          <a href="https://www.gauteng.gov.za/Pages/Graduate-Programme.aspx" target="_blank">Apply here</a>
-        </li>
-        <li>
-          <strong>eThekwini Municipality – Graduate Programme</strong><br>
-          <em>Preferred Qualifications:</em> BSc in Town and Regional Planning<br>
-          <em>Closing Date:</em> 30 June 2025<br>
-          <a href="https://durbangov.graduate.erecruit.co/candidateapp/Jobs/Browse" target="_blank">Apply here</a>
-        </li>
-        <li>
-          <strong> Alfeco Foundation – Graduate Programme</strong><br>
-          <em>Preferred Qualifications:</em> BSc in Environmental Science, Engineering, or related fields<br>
-          <em>Closing Date:</em> 30 June 2025<br>
-          <a href="https://alfecofoundation.com/skills-development-programme/" target="_blank">Apply here</a>
-        </li>
+    <p>
+
+        Explore graduate development programmes available to
+        Engineering and Built Environment students.
+        Opportunities are updated regularly as applications open.
+
+    </p>
+
+    <p class="page-update">
+
+    <i class="fas fa-clock"></i>
+
+    Last Updated: July 2026
+
+</p>
+
+</section>
+
+<section class="bursary-search-section">
+
+    <div class="search-box">
+
+        <i class="fas fa-search"></i>
+
+        <input
+            type="text"
+            id="programmeSearch"
+            placeholder="Search graduate programmes...">
+
+    </div>
+
+</section>
+        <h2>
+            <i class="fas fa-gears"></i>
+            Engineering Opportunities
+        </h2>
+
+        <div class="bursary-grid">
+      </div>
+
+        <div class="bursary-card">
+
+    <h3>Sasol Foundation Graduate Internship Programme</h3>
+
+    <div class="bursary-info">
+
+        <span><i class="fas fa-user-graduate"></i> Civil, Industrial Engineering</span>
+
+        <span><i class="fas fa-calendar"></i> Closes: 10 March 2026</span>
+
+    </div>
+
+    <p>
+        Graduate internship programme offering structured technical training
+        for engineering graduates.
+    </p>
+
+    <a href="https://jobs.sasol.com/job/Secunda-Sasol-Foundation-Graduate-Internship-Programme-x-22/1367701633/"
+       target="_blank"
+       class="apply-btn">
+
+        Apply Now
+
+    </a>
+
+</div>
+
+
+
+<div class="bursary-card">
+
+    <h3>Eskom Engineer-in-Training</h3>
+
+    <div class="bursary-info">
+
+        <span><i class="fas fa-user-graduate"></i> Electrical Engineering</span>
+
+        <span><i class="fas fa-calendar"></i> Closes: 27 February 2026</span>
+
+    </div>
+
+    <p>
+
+        Eskom's Engineer-in-Training programme develops graduate engineers
+        through structured technical and operational experience.
+
+    </p>
+
+    <a href="https://eskomcareers.ci.hr/applicant/index.php?controller=Listings&method=view&listingid=b12a5578-2d9f-49f5-bbf7-cb26dd1579c7"
+       target="_blank"
+       class="apply-btn">
+
+        Apply Now
+
+    </a>
+
+</div>
+
+
+
+<div class="bursary-card">
+
+    <h3>Rand Water Graduate Internship</h3>
+
+    <div class="bursary-info">
+
+        <span><i class="fas fa-user-graduate"></i> Construction Management (Hons)</span>
+
+        <span><i class="fas fa-calendar"></i> Closes: 09 March 2026</span>
+
+    </div>
+
+    <p>
+
+        Graduate development programme within one of South Africa's leading
+        water utilities.
+
+    </p>
+
+    <a href="https://randwater.erecruit.co/candidateapp/Jobs/View/RAN260223-2?source=LinkedInLimitedListings"
+       target="_blank"
+       class="apply-btn">
+
+        Apply Now
+
+    </a>
+
+</div>
+
+
+
+<div class="bursary-card">
+
+    <h3>P&G Manufacturing Process Engineer</h3>
+
+    <div class="bursary-info">
+
+        <span><i class="fas fa-user-graduate"></i> Mechanical, Electrical & Industrial Engineering</span>
+
+        <span><i class="fas fa-calendar"></i> Closes: 30 March 2026</span>
+
+    </div>
+
+    <p>
+
+        Graduate opportunity in manufacturing engineering with exposure to
+        world-class production systems.
+
+    </p>
+
+    <a href="https://www.pgcareers.com/global/en/job/R000134499/Manufacturing-Process-Engineer?source=RS_LINKEDIN"
+       target="_blank"
+       class="apply-btn">
+
+        Apply Now
+
+    </a>
+
+</div>
+
+
+
+<div class="bursary-card">
+
+    <h3>Vodacom Discover Graduate Programme</h3>
+
+    <div class="bursary-info">
+
+        <span><i class="fas fa-user-graduate"></i> Computer Science, IT & Electrical Engineering</span>
+
+        <span><i class="fas fa-calendar"></i> Closes: 31 August 2025</span>
+
+    </div>
+
+    <p>
+
+        National graduate programme designed to develop future technology and
+        engineering leaders.
+
+    </p>
+
+    <a href="https://www.vodacom.com/discover-graduate-programme.php"
+       target="_blank"
+       class="apply-btn">
+
+        Apply Now
+
+    </a>
+
+</div>
+        <div class="bursary-card">
+
+    <h3>Transnet Young Professional-in-Training</h3>
+
+    <div class="bursary-info">
+
+        <span><i class="fas fa-user-graduate"></i> Engineering Graduates</span>
+
+        <span><i class="fas fa-calendar"></i> Annual Recruitment</span>
+
+    </div>
+
+    <p>
+        Structured graduate development programme offering practical engineering
+        experience across Transnet's operations.
+    </p>
+
+    <a href="YOUR_TRANSNET_LINK"
+       target="_blank"
+       class="apply-btn">
+        Apply Now
+    </a>
+
+</div>
+
+
+<div class="bursary-card">
+
+    <h3>Anglo American Graduate Programme</h3>
+
+    <div class="bursary-info">
+
+        <span><i class="fas fa-user-graduate"></i> Engineering Graduates</span>
+
+        <span><i class="fas fa-calendar"></i> Annual Recruitment</span>
+
+    </div>
+
+    <p>
+        Develop your career through technical rotations, mentorship and leadership
+        development within one of the world's largest mining companies.
+    </p>
+
+    <a href="YOUR_ANGLO_LINK"
+       target="_blank"
+       class="apply-btn">
+        Apply Now
+    </a>
+
+</div>
+
+
+<div class="bursary-card">
+
+    <h3>Capitec Graduate Development Programme</h3>
+
+    <div class="bursary-info">
+
+        <span><i class="fas fa-user-graduate"></i> Engineering & Technology Graduates</span>
+
+        <span><i class="fas fa-calendar"></i> Annual Recruitment</span>
+
+    </div>
+
+    <p>
+        Graduate programme designed for future innovators in technology,
+        analytics and digital engineering.
+    </p>
+
+    <a href="YOUR_CAPITEC_LINK"
+       target="_blank"
+       class="apply-btn">
+        Apply Now
+    </a>
+
+</div>
+
+
+<div class="bursary-card">
+
+    <h3>TotalEnergies Young Graduate Programme</h3>
+
+    <div class="bursary-info">
+
+        <span><i class="fas fa-user-graduate"></i> Engineering Graduates</span>
+
+        <span><i class="fas fa-calendar"></i> Annual Recruitment</span>
+
+    </div>
+
+    <p>
+        International graduate programme providing technical development and
+        exposure within the energy industry.
+    </p>
+
+    <a href="YOUR_TOTAL_LINK"
+       target="_blank"
+       class="apply-btn">
+        Apply Now
+    </a>
+
+</div>
+
+
+<div class="bursary-card">
+
+    <h3>Nedbank Graduate Programme</h3>
+
+    <div class="bursary-info">
+
+        <span><i class="fas fa-user-graduate"></i> Engineering & Data Graduates</span>
+
+        <span><i class="fas fa-calendar"></i> Annual Recruitment</span>
+
+    </div>
+
+    <p>
+        Graduate programme focused on innovation, digital transformation and
+        leadership development.
+    </p>
+
+    <a href="YOUR_NEDBANK_LINK"
+       target="_blank"
+       class="apply-btn">
+        Apply Now
+    </a>
+
+</div>
+        <div class="bursary-card">
+
+    <h3>ArcelorMittal South Africa Candidate Engineer Programme</h3>
+
+    <div class="bursary-info">
+
+        <span><i class="fas fa-user-graduate"></i> Mechanical, Electrical, Chemical & Metallurgical Engineering</span>
+
+        <span><i class="fas fa-calendar"></i> Annual Recruitment</span>
+
+    </div>
+
+    <p>
+
+        Kick-start your engineering career through structured technical training
+        in one of Africa's largest steel manufacturing companies.
+
+    </p>
+
+    <a href="YOUR_ARCELORMITTAL_LINK"
+       target="_blank"
+       class="apply-btn">
+
+        Apply Now
+
+    </a>
+
+</div>
+
+
+
+<div class="bursary-card">
+
+    <h3>Mercedes-Benz South Africa Graduate Development Programme</h3>
+
+    <div class="bursary-info">
+
+        <span><i class="fas fa-user-graduate"></i> Mechanical, Industrial & Electrical Engineering</span>
+
+        <span><i class="fas fa-calendar"></i> Annual Recruitment</span>
+
+    </div>
+
+    <p>
+
+        Join Mercedes-Benz South Africa and gain exposure to world-class
+        automotive manufacturing and engineering operations.
+
+    </p>
+
+    <a href="YOUR_MBSA_LINK"
+       target="_blank"
+       class="apply-btn">
+
+        Apply Now
+
+    </a>
+
+</div>
+
+
+
+<div class="bursary-card">
+
+    <h3>Siemens South Africa Graduate Programme</h3>
+
+    <div class="bursary-info">
+
+        <span><i class="fas fa-user-graduate"></i> Electrical, Electronic & Mechanical Engineering</span>
+
+        <span><i class="fas fa-calendar"></i> Annual Recruitment</span>
+
+    </div>
+
+    <p>
+
+        Develop your career with Siemens through hands-on engineering projects,
+        mentorship and international best practices.
+
+    </p>
+
+    <a href="YOUR_SIEMENS_LINK"
+       target="_blank"
+       class="apply-btn">
+
+        Apply Now
+
+    </a>
+
+</div>
+
+
+
+<div class="bursary-card">
+
+    <h3>ABB South Africa Graduate Programme</h3>
+
+    <div class="bursary-info">
+
+        <span><i class="fas fa-user-graduate"></i> Electrical, Electronic & Mechatronic Engineering</span>
+
+        <span><i class="fas fa-calendar"></i> Annual Recruitment</span>
+
+    </div>
+
+    <p>
+
+        Work alongside industry experts delivering innovative automation,
+        robotics and electrification solutions.
+
+    </p>
+
+    <a href="YOUR_ABB_LINK"
+       target="_blank"
+       class="apply-btn">
+
+        Apply Now
+
+    </a>
+
+</div>
+
+
+
+<div class="bursary-card">
+
+    <h3>BMW South Africa Graduate Programme</h3>
+
+    <div class="bursary-info">
+
+        <span><i class="fas fa-user-graduate"></i> Mechanical, Industrial & Electrical Engineering</span>
+
+        <span><i class="fas fa-calendar"></i> Annual Recruitment</span>
+
+    </div>
+
+    <p>
+
+        Gain practical experience within BMW South Africa's production,
+        manufacturing and engineering divisions.
+
+    </p>
+
+    <a href="YOUR_BMW_LINK"
+       target="_blank"
+       class="apply-btn">
+
+        Apply Now
+
+    </a>
+
+</div>
+
+              <h2>
+            <i class="fas fa-building"></i>
+            Built Environment Opportunities
+        </h2>
+
+        <div class="bursary-grid">
+      </div>
+
+        <div class="bursary-card">
+
+    <h3>WBHO Graduate Programme</h3>
+
+    <div class="bursary-info">
+
+        <span><i class="fas fa-user-graduate"></i> Civil Engineering & Construction Management</span>
+
+        <span><i class="fas fa-calendar"></i> Annual Recruitment</span>
+
+    </div>
+
+    <p>
+
+        Join one of South Africa's leading construction companies and gain
+        practical experience on major infrastructure projects.
+
+    </p>
+
+    <a href="YOUR_WBHO_LINK"
+       target="_blank"
+       class="apply-btn">
+
+        Apply Now
+
+    </a>
+
+</div>
+
+
+
+<div class="bursary-card">
+
+    <h3>Murray & Roberts Graduate Development Programme</h3>
+
+    <div class="bursary-info">
+
+        <span><i class="fas fa-user-graduate"></i> Civil Engineering & Construction</span>
+
+        <span><i class="fas fa-calendar"></i> Annual Recruitment</span>
+
+    </div>
+
+    <p>
+
+        Develop your technical and leadership skills through structured
+        rotations across major engineering and construction projects.
+
+    </p>
+
+    <a href="YOUR_MR_LINK"
+       target="_blank"
+       class="apply-btn">
+
+        Apply Now
+
+    </a>
+
+</div>
+
+
+
+<div class="bursary-card">
+
+    <h3>Aurecon Graduate Programme</h3>
+
+    <div class="bursary-info">
+
+        <span><i class="fas fa-user-graduate"></i> Civil, Electrical & Built Environment</span>
+
+        <span><i class="fas fa-calendar"></i> Annual Recruitment</span>
+
+    </div>
+
+    <p>
+
+        Gain experience working alongside multidisciplinary consulting
+        engineers on local and international projects.
+
+    </p>
+
+    <a href="YOUR_AURECON_LINK"
+       target="_blank"
+       class="apply-btn">
+
+        Apply Now
+
+    </a>
+
+</div>
+
+
+
+<div class="bursary-card">
+
+    <h3>SMEC South Africa Graduate Programme</h3>
+
+    <div class="bursary-info">
+
+        <span><i class="fas fa-user-graduate"></i> Civil Engineering</span>
+
+        <span><i class="fas fa-calendar"></i> Annual Recruitment</span>
+
+    </div>
+
+    <p>
+
+        Graduate opportunity focusing on transportation, water,
+        infrastructure and consulting engineering.
+
+    </p>
+
+    <a href="YOUR_SMEC_LINK"
+       target="_blank"
+       class="apply-btn">
+
+        Apply Now
+
+    </a>
+
+</div>
+
+
+
+<div class="bursary-card">
+
+    <h3>GIBB Graduate Programme</h3>
+
+    <div class="bursary-info">
+
+        <span><i class="fas fa-user-graduate"></i> Engineering & Built Environment</span>
+
+        <span><i class="fas fa-calendar"></i> Annual Recruitment</span>
+
+    </div>
+
+    <p>
+
+        Structured graduate development programme with exposure to
+        multidisciplinary consulting and infrastructure projects.
+
+    </p>
+
+    <a href="YOUR_GIBB_LINK"
+       target="_blank"
+       class="apply-btn">
+
+        Apply Now
+
+    </a>
+
+</div>
 
       </ul>
       <p>For more information on the graduate programmes, please visit the respective websites.</p>

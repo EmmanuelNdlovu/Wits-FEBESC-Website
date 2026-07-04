@@ -119,7 +119,7 @@ header h1{
 
     color:white;
 
-    font-size:2.4rem;
+    font-size:2.2rem;
 
 }
 
@@ -1221,6 +1221,16 @@ section h2{
 
 }
 
+.bursary-card p{
+
+    line-height:1.6;
+
+    margin:1.2rem 0;
+
+    color:#555;
+
+}
+
 .bursary-card:hover{
 
     transform:translateY(-8px);
@@ -1844,56 +1854,65 @@ section h2{
 
     .announcement-bar{
 
-        flex-direction:column;
+        padding:.55rem .8rem;
+        gap:.35rem;
+        font-size:.85rem;
 
-        gap:.5rem;
+    }
 
-        text-align:center;
+    .announcement-content{
 
-        padding:1rem;
+        gap:.4rem;
+
+    }
+
+    .announcement-bar i{
+
+        font-size:.95rem;
+
+    }
+
+    .announcement-bar a{
+
+        font-size:.85rem;
 
     }
 
     /* ---------- Hero ---------- */
 
-    .hero{
+.hero{
 
-        height:75vh;
+    height:85vh;
+    min-height:600px;
 
-        min-height:550px;
+}
 
-    }
+.hero-overlay{
 
-    .hero-overlay h1{
+    padding:1rem;
 
-        font-size:2.4rem;
+}
 
-    }
+.hero-overlay h1{
 
-    .hero-overlay p{
+    font-size:2rem;
+    line-height:1.2;
 
-        font-size:1rem;
+}
 
-    }
+.hero-overlay p{
 
-    .hero-buttons{
+    font-size:.95rem;
+    margin-bottom:2rem;
 
-        flex-direction:column;
+}
 
-        width:100%;
+.hero-buttons{
 
-        max-width:320px;
+    width:100%;
+    max-width:300px;
 
-    }
-
-    .btn-primary,
-    .btn-secondary{
-
-        width:100%;
-
-        text-align:center;
-
-    }
+}
 
     /* ---------- Sections ---------- */
 
@@ -2106,5 +2125,128 @@ section h2{
         padding:14px 22px;
 
     }
+
+}
+
+/* ==========================================================
+   MOBILE NAVIGATION
+========================================================== */
+
+.menu-toggle{
+
+    display:none;
+    background:none;
+    border:none;
+    color:white;
+    font-size:2rem;
+    cursor:pointer;
+
+}
+
+@media (max-width:768px){
+
+    /* Header */
+
+    header{
+
+        padding:0.8rem 1rem;
+        flex-direction:column;
+        align-items:flex-start;
+
+    }
+
+    header img{
+
+        height:45px !important;
+        width:auto !important;
+        margin-bottom:.5rem;
+
+    }
+
+    header h1{
+
+        font-size:1.35rem;
+        margin:0;
+        padding-right:55px;
+
+    }
+
+    /* Hamburger */
+
+    .menu-toggle{
+
+        display:block;
+        position:absolute;
+        top:18px;
+        right:18px;
+        z-index:1100;
+
+    }
+
+    /* Navigation */
+
+    nav{
+
+        display:none;
+        width:100%;
+        margin-top:1rem;
+
+    }
+
+    nav.active{
+
+        display:block;
+
+    }
+
+    nav ul{
+
+        flex-direction:column;
+        gap:0;
+        background:#003366;
+        border-radius:10px;
+        overflow:hidden;
+
+    }
+
+    nav li{
+
+        width:100%;
+
+    }
+
+    nav a{
+
+        display:block;
+        padding:0.9rem 1rem;
+        border-top:1px solid rgba(255,255,255,.15);
+
+    }
+
+}
+
+/* ==========================================================
+   PAGE UPDATE TIMESTAMP
+========================================================== */
+
+.page-update{
+
+    text-align:center;
+
+    color:#666;
+
+    font-size:.95rem;
+
+    margin-top:-.5rem;
+
+    margin-bottom:2rem;
+
+}
+
+.page-update i{
+
+    color:#A28C74;
+
+    margin-right:.4rem;
 
 }
