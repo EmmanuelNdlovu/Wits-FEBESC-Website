@@ -157,7 +157,62 @@ if (galleryModal) {
     });
 
 }
+/*
+// =========================================
+// Document Lightbox for PDFs
+// =========================================
 
+    const modal = document.getElementById('pdf-modal');
+    const openBtn = document.getElementById('open-pdf-btn');
+    const closeBtn = document.getElementById('close-pdf-btn');
+
+    // Open the modal when clicking the text/button
+    openBtn.addEventListener('click', () => {
+        modal.showModal(); // showModal() is built into HTML5 browsers
+    });
+
+    // Close the modal when clicking the X button
+    closeBtn.addEventListener('click', () => {
+        modal.close();
+    });
+
+    // Optional: Close the modal if they click outside the box
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            modal.close();
+        }
+    });
+*/
+
+// =========================================
+// Document Lightbox for PDFs
+// =========================================
+
+const pdfModal = document.getElementById('pdf-modal');
+const openPdfBtn = document.getElementById('open-pdf-btn'); // Matches your link's ID
+const closePdfBtn = document.getElementById('close-pdf-btn');
+
+// Only run the listeners if the elements actually exist on the current page
+if (pdfModal && openPdfBtn && closePdfBtn) {
+
+    // Open the modal when clicking the button
+    openPdfBtn.addEventListener('click', (e) => {
+        e.preventDefault(); // Prevents the '#' link from jumping the page
+        pdfModal.showModal(); 
+    });
+
+    // Close the modal when clicking the X button
+    closePdfBtn.addEventListener('click', () => {
+        pdfModal.close();
+    });
+
+    // Close the modal if they click outside the box
+    pdfModal.addEventListener('click', (e) => {
+        if (e.target === pdfModal) {
+            pdfModal.close();
+        }
+    });
+}
 // =========================================
 // ANIMATED STAT COUNTERS
 // =========================================

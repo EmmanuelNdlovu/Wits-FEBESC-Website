@@ -2250,3 +2250,50 @@ section h2{
     margin-right:.4rem;
 
 }
+
+/* ==========================================================
+   OPEN PDF MODAL
+========================================================== */
+
+
+/* The Modal Container Box */
+#pdf-modal {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    width: 85%;
+    max-width: 850px;
+    padding: 20px;
+    font-family: inherit; /* Inherits your website's clean font */
+}
+
+/* The "Cloud" Dimmed Background Backdrop */
+#pdf-modal::backdrop {
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px); /* Soft modern blur effect */
+}
+
+/* Modal layout header */
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 12px;
+    margin-bottom: 15px;
+}
+
+/* The X Button at the top right */
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 32px;
+    color: #666;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0;
+}
+.close-btn:hover {
+    color: #ff3333;
+}
+
